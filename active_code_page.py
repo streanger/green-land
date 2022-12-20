@@ -1,5 +1,4 @@
 import os
-from ctypes import windll
 
 
 def get_active_code_page():
@@ -7,6 +6,7 @@ def get_active_code_page():
     https://stackoverflow.com/questions/66137468/how-to-get-the-codepage-currently-used-in-local-computer
     """
     if os.name == 'nt':
+        from ctypes import windll
         code_page = windll.kernel32.GetConsoleOutputCP()
         code_page = str(code_page)
     else:
