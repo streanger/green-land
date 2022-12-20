@@ -7,3 +7,7 @@
 ```bash
 python app.py
 ```
+
+## screenshots
+
+![image](screenshots/screenshot1.png)
